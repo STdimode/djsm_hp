@@ -1,0 +1,528 @@
+/*
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/NotoSansKR-Light.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/NotoSansKR-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/NotoSansKR-Bold.woff2') format('woff2');
+}
+*/
+
+:root {
+    --max-width: 1440px;
+    --baseline-rem: 16px;
+}
+
+/* Base Breakout */
+.cms-content-root {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    overflow-x: hidden;
+}
+
+.app-container {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Utilities */
+.max-w-\[1440px\] { max-width: 1440px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.overflow-hidden { overflow: hidden; }
+.text-center { text-align: center; }
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.w-fit { width: fit-content; }
+.justify-start { justify-content: flex-start; }
+.flex-col { flex-direction: column; }
+.bg-white { background-color: #ffffff; }
+
+/* ━━━ HEADER ━━━ */
+.header-container {
+    background: rgba(30, 40, 60, 0.5);
+    height: 4.75rem; /* 76px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.header-logo-text {
+    color: white;
+    font-size: 1.33rem;
+    font-weight: 500;
+}
+.header-nav {
+    display: none;
+    gap: 1.75rem; /* 28px */
+}
+.header-nav-link {
+    color: white;
+    font-size: 1.11rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+.header-hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ━━━ HERO ━━━ */
+.hero-section {
+    height: 28.75rem; /* 460px */
+}
+.hero-image {
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+.hero-image-active {
+    opacity: 1;
+}
+
+/* ━━━ WELCOME ━━━ */
+.welcome-section {
+    background-color: #F7F8F9;
+    padding-top: 2.5rem; /* 40px */
+    padding-bottom: 2.5rem;
+}
+.welcome-text-container {
+    text-align: center;
+}
+.welcome-bar {
+    width: 2rem; /* 32px */
+    height: 0.125rem; /* 2px */
+    background: #aaa;
+    margin-bottom: 1rem; /* 16px */
+}
+.welcome-title {
+    font-size: 1.77rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #222;
+    margin-bottom: 0.875rem; /* 14px */
+}
+.welcome-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    max-width: 25rem; /* 400px */
+}
+.welcome-cards-container {
+    display: flex;
+    justify-content: center;
+}
+.welcome-card {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* 8px */
+    cursor: pointer;
+    background: white;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+}
+.welcome-card:hover {
+    transform: translateY(-0.9375rem); /* -15px */
+}
+.welcome-card-label {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* ━━━ THREE CARDS ━━━ */
+.three-cards-section {
+    padding-top: 2rem; /* 32px */
+    padding-bottom: 2.5rem; /* 40px */
+}
+.three-card {
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+}
+.card-1-overlay { background: linear-gradient(to bottom, rgba(40,30,20,0.5), rgba(40,30,20,0.7)); }
+.card-2-overlay { background: linear-gradient(to bottom, rgba(160,100,30,0.55), rgba(160,100,30,0.75)); }
+.card-3-overlay { background: linear-gradient(to bottom, rgba(40,30,50,0.35), rgba(40,30,50,0.6)); }
+
+.three-card-content {
+    padding: 1rem; /* 16px */
+}
+.three-card-badge {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.94rem;
+    letter-spacing: 1px;
+}
+.three-card-title {
+    color: white;
+    font-size: 1.77rem;
+    font-weight: 700;
+    margin-top: 0.75rem; /* 12px */
+}
+.three-card-title-mobile {
+    color: white;
+    font-size: 1.22rem;
+    font-weight: 700;
+    margin-top: 0.5rem; /* 8px */
+}
+.three-card-subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.94rem;
+    margin-top: 0.5rem; /* 8px */
+}
+.three-card-date {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.94rem;
+    margin-top: 0.25rem; /* 4px */
+}
+.three-card-arrow {
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.three-card:hover .three-card-arrow {
+    transform: translateY(-0.25rem); /* -4px */
+    background: rgba(255,255,255,0.3);
+}
+.hidden { display: none; }
+.block { display: block; }
+
+/* ━━━ CHURCH SCHOOL ━━━ */
+.church-school-section {
+    background-size: cover;
+    background-position: center;
+}
+.church-school-overlay {
+    background: rgba(0,0,0,0.5);
+}
+.church-school-title {
+    color: white;
+    font-size: 1.77rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem; /* 12px */
+}
+.church-school-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    margin-bottom: 2rem; /* 32px */
+}
+.school-card {
+    background: white;
+    border-radius: 0;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    transition: background 0.35s ease;
+    cursor: pointer;
+}
+.school-card:hover {
+    background: #1e3a8a;
+}
+.school-card-icon {
+    margin-bottom: 0.75rem; /* 12px */
+    display: flex;
+    justify-content: center;
+    transition: filter 0.35s ease;
+    transform: scale(0.75);
+    transform-origin: center;
+}
+.school-card:hover .school-card-icon {
+    filter: brightness(0) invert(1);
+}
+.school-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.375rem; /* 6px */
+    transition: color 0.35s ease;
+}
+.school-card:hover .school-card-title {
+    color: white;
+}
+.school-card-desc {
+    font-size: 0.88rem;
+    color: #777;
+    white-space: pre-line;
+    line-height: 1.6;
+    transition: color 0.35s ease;
+}
+.school-card:hover .school-card-desc {
+    color: rgba(255,255,255,0.75);
+}
+
+/* ━━━ GALLERY ━━━ */
+.gallery-section {
+    /* bg-white */
+}
+.gallery-title {
+    font-size: 1.77rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #222;
+    text-align: center;
+    margin-bottom: 2rem; /* 32px */
+}
+.gallery-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    user-select: none;
+    touch-action: pan-y;
+    padding: 0 1rem; /* Default for mobile */
+}
+.gallery-carousel-track {
+    display: flex;
+    /* transition is handled via JS */
+}
+.gallery-slide {
+    flex-shrink: 0;
+}
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+.gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.75rem; /* 28px */
+    padding: 0 1rem;
+}
+.gallery-btn-prev, .gallery-btn-next {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem; /* 4px */
+    flex-shrink: 0;
+}
+.gallery-arrow-svg {
+    height: 1.25rem; /* 20px */
+}
+.gallery-arrow-left, .gallery-arrow-right {
+    width: 3.75rem; /* 60px mobile */
+}
+.gallery-dots {
+    display: flex;
+    gap: 0.5rem; /* 8px */
+    align-items: center;
+}
+.gallery-dot {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* ━━━ FOOTER ━━━ */
+.footer-section {
+    background: #333;
+}
+.footer-church-name {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 0.25rem; /* 4px */
+}
+.footer-pastor {
+    color: #aaa;
+    font-size: 0.94rem;
+    margin-bottom: 0.75rem; /* 12px */
+}
+.footer-divider {
+    width: 1.75rem; /* 28px */
+    height: 0.0625rem; /* 1px */
+    background: #666;
+    margin-bottom: 0.75rem; /* 12px */
+}
+.footer-address {
+    color: #888;
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+.footer-copyright {
+    color: #999;
+    font-size: 0.94rem;
+}
+.footer-designer {
+    color: #777;
+    font-size: 0.94rem;
+}
+.footer-right {
+    align-items: flex-start;
+}
+
+
+/* ━━━ FADE UP ━━━ */
+.fade-up {
+    opacity: 0;
+    transform: translateY(2.25rem); /* 36px */
+    /* Transition applied via JS based on data-delay */
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ━━━ MEDIA QUERIES ━━━ */
+@media (min-width: 768px) {
+    .md\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .md\:flex {
+        display: flex;
+    }
+    .md\:hidden {
+        display: none;
+    }
+    .md\:block {
+        display: block;
+    }
+    .md\:flex-row {
+        flex-direction: row;
+    }
+    .md\:items-center {
+        align-items: center;
+    }
+    .md\:justify-between {
+        justify-content: space-between;
+    }
+    .md\:justify-end {
+        justify-content: flex-end;
+    }
+    .md\:text-left {
+        text-align: left;
+    }
+    .md\:text-right {
+        text-align: right;
+    }
+    .md\:mx-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-section {
+        height: 45.5rem; /* 728px */
+    }
+
+    .welcome-section {
+        padding-top: 3.5rem; /* 56px */
+        padding-bottom: 3.5rem;
+    }
+    .md\:gap-10 {
+        gap: 2.5rem; /* 40px */
+    }
+    .welcome-cards-grid {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    .three-cards-section {
+        padding-top: 3.75rem; /* 60px */
+        padding-bottom: 4.375rem; /* 70px */
+    }
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .md\:gap-\[30px\] {
+        gap: 1.875rem; /* 30px */
+    }
+    .three-card {
+        height: 23.75rem; /* 380px */
+    }
+    .three-card-content {
+        padding-top: 2rem; /* 32px */
+        padding-right: 1.75rem; /* 28px */
+        padding-bottom: 1.75rem;
+        padding-left: 2rem;
+    }
+    .three-card-arrow {
+        bottom: 1.75rem; /* 28px */
+        right: 1.75rem;
+        width: 2.75rem; /* 44px */
+        height: 2.75rem;
+    }
+
+    .church-school-section {
+        padding-top: 4.375rem; /* 70px */
+        padding-bottom: 4.375rem;
+    }
+    .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .md\:gap-6 {
+        gap: 1.5rem; /* 24px */
+    }
+    .school-card {
+        padding: 2.5rem; /* 40px */
+    }
+    .md\:\[transform\:scale\(1\)\] {
+        transform: scale(1);
+    }
+    .school-card-title {
+        font-size: 1.11rem;
+    }
+
+    .gallery-section {
+        padding-top: 3.75rem; /* 60px */
+        padding-bottom: 3.75rem;
+    }
+    .gallery-carousel-wrapper {
+        padding: 0;
+    }
+    .gallery-arrow-left, .gallery-arrow-right {
+        width: 10rem; /* 160px */
+    }
+
+    .footer-section {
+        padding-top: 2.5rem; /* 40px */
+        padding-bottom: 2.5rem;
+    }
+    .md\:items-end {
+        align-items: flex-end;
+    }
+}
