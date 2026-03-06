@@ -24,7 +24,9 @@
     src: url('../fonts/NotoSansKR-Bold.woff2') format('woff2');
 }
 */
-
+html {
+    font-size: 18px; /* 1rem = 18px 이 됩니다 */
+}
 :root {
     --max-width: 1440px;
     --baseline-rem: 16px;
@@ -96,7 +98,6 @@
 .welcome-title {
     font-size: 1.77rem;
     font-weight: 700;
-    font-style: italic;
     color: #222;
     margin-bottom: 0.875rem; /* 14px */
 }
@@ -163,7 +164,7 @@
     background-size: cover;
     background-position: center;
 }
-.card-1-bg { background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/b296f3afe89d1d05fc74a1591eaa36470b560ba9.png'); }
+.card-1-bg { background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/sermon_bg_1.png'); }
 .card-2-bg { background-image: url('https://images.unsplash.com/photo-1545508494-791bd389831e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJsZSUyMGJvb2slMjBzaGFkb3clMjBsaWdodCUyMG1vb2R5JTIwbm8lMjBwZW9wbGV8ZW58MXx8fHwxNzcyNjI1MDk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'); }
 .card-3-bg { background-image: url('https://images.unsplash.com/photo-1558418294-9da149757efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhciUyMGJsdWUlMjBza3klMjBtaW5pbWFsfGVufDF8fHx8MTc3MjYyNDk3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'); }
 
@@ -343,7 +344,6 @@
 .gallery-title {
     font-size: 1.77rem;
     font-weight: 700;
-    font-style: italic;
     color: #222;
     text-align: center;
     margin-bottom: 2rem; /* 32px */
