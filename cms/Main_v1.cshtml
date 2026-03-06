@@ -15,10 +15,10 @@
 <div class="cms-content-root">
     <div class="app-container">
         <!-- ━━━ HEADER ━━━ -->
-        <header class="header-container fixed top-0 left-0 w-full z-50">
-            <div class="header-content max-w-[1440px] mx-auto px-4 md:px-8 h-full flex items-center justify-between">
+        <header class="header-container">
+            <div class="header-content">
                 <!-- logo -->
-                <div class="header-logo flex items-center gap-2">
+                <div class="header-logo">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
                         <path d="M11 2C7 2 3 6 3 11c0 4 2 7 4 8.5C8 20 10 20 11 20c1 0 3 0 4-0.5 2-1.5 4-4.5 4-8.5C19 6 15 2 11 2z" fill="#2eb872"></path>
                         <path d="M11 5v13M7 9c2 1 4 2 7 5" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
@@ -26,7 +26,7 @@
                     <span class="header-logo-text">디모데교회</span>
                 </div>
                 <!-- nav -->
-                <nav class="header-nav hidden md:flex items-center">
+                <nav class="header-nav">
                     <a href="#" class="header-nav-link">교회소개</a>
                     <a href="#" class="header-nav-link">말씀과 찬양</a>
                     <a href="#" class="header-nav-link">다음 세대와 청년</a>
@@ -46,27 +46,27 @@
         </header>
 
         <!-- ━━━ HERO ━━━ -->
-        <section class="hero-section relative w-full overflow-hidden h-[460px] md:h-[728px]">
+        <section class="hero-section">
             <!-- Crossfade background images -->
-            <div class="hero-image absolute inset-0 hero-image-active" style="background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/56d4c81500cc6e941f92910cb4cf004eb75bf8bc.png');"></div>
-            <!-- dots - hidden when single image (removed based on React logic, but keeping HTML structure for dynamic if needed) -->
+            <div class="hero-image hero-image-active" style="background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/56d4c81500cc6e941f92910cb4cf004eb75bf8bc.png');"></div>
+            <!-- dots - hidden when single image -->
         </section>
 
         <!-- ━━━ WELCOME ━━━ -->
-        <section class="welcome-section bg-[#F7F8F9] py-10 md:py-[56px]">
-            <div class="welcome-container max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col items-center md:flex-row md:items-center md:justify-between gap-8 md:gap-10">
+        <section class="welcome-section">
+            <div class="welcome-container">
                 <div class="fade-up">
-                    <div class="welcome-text-container text-center md:text-left">
-                        <div class="welcome-bar mx-auto md:mx-0"></div>
+                    <div class="welcome-text-container">
+                        <div class="welcome-bar"></div>
                         <h2 class="welcome-title">welcome</h2>
                         <p class="welcome-desc">하나님의 뜻을 이루는 교회,​대전서문교회에 오신것을 환영합니다.<br><br></p>
                     </div>
                 </div>
 
                 <div class="fade-up" data-delay="150">
-                    <div class="welcome-cards-container flex justify-center md:justify-end">
-                        <div class="welcome-cards-grid grid grid-cols-2 md:inline-flex md:flex-wrap gap-3 justify-start w-fit">
-                            <div class="welcome-card w-[104px] h-[96px] md:w-[130px] md:h-[120px]">
+                    <div class="welcome-cards-container">
+                        <div class="welcome-cards-grid">
+                            <div class="welcome-card">
                                 <svg width="43" height="43" viewBox="0 0 43 43" fill="none" stroke="#555" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21.5 8v27M15 20h13"></path>
                                     <path d="M15.5 14l-3-3M27.5 14l3-3"></path>
@@ -75,14 +75,14 @@
                                 </svg>
                                 <span class="welcome-card-label">비전 나눔</span>
                             </div>
-                            <div class="welcome-card w-[104px] h-[96px] md:w-[130px] md:h-[120px]">
+                            <div class="welcome-card">
                                 <svg width="43" height="43" viewBox="0 0 43 43" fill="none" stroke="#555" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="7" y="12" width="29" height="20" rx="1.5"></rect>
                                     <path d="M7 14l14.5 11L36 14"></path>
                                 </svg>
                                 <span class="welcome-card-label">인사말씀</span>
                             </div>
-                            <div class="welcome-card w-[104px] h-[96px] md:w-[130px] md:h-[120px]">
+                            <div class="welcome-card">
                                 <svg width="43" height="43" viewBox="0 0 43 43" fill="none" stroke="#555" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="10" y="6" width="23" height="31" rx="2"></rect>
                                     <path d="M10 31h23"></path>
@@ -90,7 +90,7 @@
                                 </svg>
                                 <span class="welcome-card-label">예배안내</span>
                             </div>
-                            <div class="welcome-card w-[104px] h-[96px] md:w-[130px] md:h-[120px]">
+                            <div class="welcome-card">
                                 <svg width="43" height="43" viewBox="0 0 43 43" fill="none" stroke="#555" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="17" cy="14" r="5"></circle>
                                     <path d="M7 36c0-6 4-10 10-10s10 4 10 10"></path>
@@ -98,7 +98,7 @@
                                 </svg>
                                 <span class="welcome-card-label">교회섬김</span>
                             </div>
-                            <div class="welcome-card w-[104px] h-[96px] md:w-[130px] md:h-[120px]">
+                            <div class="welcome-card">
                                 <svg width="43" height="43" viewBox="0 0 43 43" fill="none" stroke="#555" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21.5 6C16 6 12 10.5 12 16c0 8 9.5 19 9.5 19S31 24 31 16c0-5.5-4-10-9.5-10z"></path>
                                     <circle cx="21.5" cy="16" r="3.5"></circle>
@@ -112,22 +112,22 @@
         </section>
 
         <!-- ━━━ THREE CARDS ━━━ -->
-        <section class="three-cards-section bg-white pt-8 pb-10 md:pt-[60px] md:pb-[70px]">
-            <div class="three-cards-container max-w-[1440px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-[30px]">
+        <section class="three-cards-section">
+            <div class="three-cards-container">
                 <!-- Card 1 -->
                 <div class="fade-up" data-delay="0">
-                    <div class="three-card relative overflow-hidden group/arrow h-[220px] md:h-[380px]" style="background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/b296f3afe89d1d05fc74a1591eaa36470b560ba9.png');">
-                        <div class="three-card-overlay absolute inset-0 card-1-overlay"></div>
-                        <div class="three-card-content relative h-full flex flex-col justify-between p-4 md:pt-8 md:pr-7 md:pb-7 md:pl-8">
+                    <div class="three-card card-1-bg">
+                        <div class="three-card-overlay card-1-overlay"></div>
+                        <div class="three-card-content">
                             <div>
                                 <span class="three-card-badge">주일오전예배 Sunday worship</span>
-                                <h3 class="three-card-title hidden md:block">설교제목입니다.</h3>
-                                <h3 class="three-card-title-mobile block md:hidden">설교제목입니다.</h3>
+                                <h3 class="three-card-title desktop-only">설교제목입니다.</h3>
+                                <h3 class="three-card-title-mobile mobile-only">설교제목입니다.</h3>
                                 <p class="three-card-subtitle">시편 131:1-3 | 김용환 목사</p>
                                 <p class="three-card-date">2026.03.08</p>
                             </div>
                         </div>
-                        <div class="three-card-arrow absolute group-hover/arrow:-translate-y-1 group-hover/arrow:bg-[rgba(255,255,255,0.3)] transition-all duration-300 bottom-3 right-3 md:bottom-7 md:right-7 w-9 h-9 md:w-11 md:h-11">
+                        <div class="three-card-arrow">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M1 11L11 1M11 1H3M11 1v8"></path>
                             </svg>
@@ -137,18 +137,18 @@
 
                 <!-- Card 2 -->
                 <div class="fade-up" data-delay="120">
-                    <div class="three-card relative overflow-hidden group/arrow h-[220px] md:h-[380px]" style="background-image: url('https://images.unsplash.com/photo-1545508494-791bd389831e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJsZSUyMGJvb2slMjBzaGFkb3clMjBsaWdodCUyMG1vb2R5JTIwbm8lMjBwZW9wbGV8ZW58MXx8fHwxNzcyNjI1MDk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');">
-                        <div class="three-card-overlay absolute inset-0 card-2-overlay"></div>
-                        <div class="three-card-content relative h-full flex flex-col justify-between p-4 md:pt-8 md:pr-7 md:pb-7 md:pl-8">
+                    <div class="three-card card-2-bg">
+                        <div class="three-card-overlay card-2-overlay"></div>
+                        <div class="three-card-content">
                             <div>
                                 <span class="three-card-badge">주일오후예배 Sunday worship</span>
-                                <h3 class="three-card-title hidden md:block">설교제목입니다.</h3>
-                                <h3 class="three-card-title-mobile block md:hidden">설교제목입니다.</h3>
+                                <h3 class="three-card-title desktop-only">설교제목입니다.</h3>
+                                <h3 class="three-card-title-mobile mobile-only">설교제목입니다.</h3>
                                 <p class="three-card-subtitle">시편 131:1-3 | 김용환 목사</p>
                                 <p class="three-card-date">2026.03.08</p>
                             </div>
                         </div>
-                        <div class="three-card-arrow absolute group-hover/arrow:-translate-y-1 group-hover/arrow:bg-[rgba(255,255,255,0.3)] transition-all duration-300 bottom-3 right-3 md:bottom-7 md:right-7 w-9 h-9 md:w-11 md:h-11">
+                        <div class="three-card-arrow">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M1 11L11 1M11 1H3M11 1v8"></path>
                             </svg>
@@ -158,18 +158,18 @@
 
                 <!-- Card 3 -->
                 <div class="fade-up" data-delay="240">
-                    <div class="three-card relative overflow-hidden group/arrow h-[220px] md:h-[380px]" style="background-image: url('https://images.unsplash.com/photo-1558418294-9da149757efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhciUyMGJsdWUlMjBza3klMjBtaW5pbWFsfGVufDF8fHx8MTc3MjYyNDk3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');">
-                        <div class="three-card-overlay absolute inset-0 card-3-overlay"></div>
-                        <div class="three-card-content relative h-full flex flex-col justify-between p-4 md:pt-8 md:pr-7 md:pb-7 md:pl-8">
+                    <div class="three-card card-3-bg">
+                        <div class="three-card-overlay card-3-overlay"></div>
+                        <div class="three-card-content">
                             <div>
                                 <span class="three-card-badge">수요예배 Wednesday worship</span>
-                                <h3 class="three-card-title hidden md:block">설교 제목입니다.</h3>
-                                <h3 class="three-card-title-mobile block md:hidden">설교 제목입니다.</h3>
+                                <h3 class="three-card-title desktop-only">설교 제목입니다.</h3>
+                                <h3 class="three-card-title-mobile mobile-only">설교 제목입니다.</h3>
                                 <p class="three-card-subtitle">시편 131:1-3 | 김용환 목사</p>
                                 <p class="three-card-date">2026.03.08</p>
                             </div>
                         </div>
-                        <div class="three-card-arrow absolute group-hover/arrow:-translate-y-1 group-hover/arrow:bg-[rgba(255,255,255,0.3)] transition-all duration-300 bottom-3 right-3 md:bottom-7 md:right-7 w-9 h-9 md:w-11 md:h-11">
+                        <div class="three-card-arrow">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M1 11L11 1M11 1H3M11 1v8"></path>
                             </svg>
@@ -180,69 +180,69 @@
         </section>
 
         <!-- ━━━ CHURCH SCHOOL ━━━ -->
-        <section class="church-school-section relative py-10 md:py-[70px]" style="background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/ebca73308d3ec6ec07e3882fa50bd0f0704c63c1.png');">
-            <div class="church-school-overlay absolute inset-0"></div>
-            <div class="church-school-container relative max-w-[1440px] mx-auto px-4 md:px-8 text-center">
+        <section class="church-school-section">
+            <div class="church-school-overlay"></div>
+            <div class="church-school-container">
                 <div class="fade-up">
                     <h2 class="church-school-title">대전서문교회 다음세대</h2>
                     <p class="church-school-desc">하나님을 바르게 알고 성장하며 신앙과 삶을 연결하도록 돕습니다.</p>
                 </div>
 
-                <div class="church-school-grid grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mx-auto">
+                <div class="church-school-grid">
                     <!-- School Card 1 -->
-                    <div class="fade-up h-full" data-delay="0">
-                        <div class="school-card p-5 md:p-10">
-                            <div class="school-card-icon md:[transform:scale(1)]">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform: scale(1.3)">
+                    <div class="fade-up church-school-fade-wrapper" data-delay="0">
+                        <div class="school-card">
+                            <div class="school-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="school-card-svg">
                                     <path d="M24 40V24"></path>
                                     <path d="M24 24c0 0-1-10 -10-12 0 8 4 12 10 12z"></path>
                                     <path d="M24 28c0 0 1-8 9-10 0 7-3 11-9 10z"></path>
                                     <path d="M24 40c0 0-4 0-6 0"></path>
                                 </svg>
                             </div>
-                            <h4 class="school-card-title md:text-[1.11rem]">유아부</h4>
-                            <p class="school-card-desc hidden md:block">말씀 안에 쑥쑥<br>자라나는 유아부</p>
+                            <h4 class="school-card-title">유아부</h4>
+                            <p class="school-card-desc desktop-only">말씀 안에 쑥쑥<br>자라나는 유아부</p>
                         </div>
                     </div>
 
                     <!-- School Card 2 -->
-                    <div class="fade-up h-full" data-delay="120">
-                        <div class="school-card p-5 md:p-10">
-                            <div class="school-card-icon md:[transform:scale(1)]">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform: scale(1.3)">
+                    <div class="fade-up church-school-fade-wrapper" data-delay="120">
+                        <div class="school-card">
+                            <div class="school-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="school-card-svg">
                                     <circle cx="24" cy="18" r="10"></circle>
                                     <path d="M24 8l2.5 5 5.5.8-4 3.9.9 5.5L24 21l-4.9 2.6.9-5.5-4-3.9 5.5-.8z"></path>
                                     <path d="M17 26l-3 12 10-4 10 4-3-12"></path>
                                 </svg>
                             </div>
-                            <h4 class="school-card-title md:text-[1.11rem]">어와나소년부</h4>
-                            <p class="school-card-desc hidden md:block">하나님의 일꾼으로<br>성장하는 어와나소년부</p>
+                            <h4 class="school-card-title">어와나소년부</h4>
+                            <p class="school-card-desc desktop-only">하나님의 일꾼으로<br>성장하는 어와나소년부</p>
                         </div>
                     </div>
 
                     <!-- School Card 3 -->
-                    <div class="fade-up h-full" data-delay="240">
-                        <div class="school-card p-5 md:p-10">
-                            <div class="school-card-icon md:[transform:scale(1)]">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform: scale(1.3)">
+                    <div class="fade-up church-school-fade-wrapper" data-delay="240">
+                        <div class="school-card">
+                            <div class="school-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="school-card-svg">
                                     <path d="M24,7 L35,24 L30,24 L39,36 L27,36 L27,43 L21,43 L21,36 L9,36 L18,24 L13,24 Z"></path>
                                 </svg>
                             </div>
-                            <h4 class="school-card-title md:text-[1.11rem]">청소년부</h4>
-                            <p class="school-card-desc hidden md:block">신앙을 바탕으로 성장하며<br>하나님과 관계를 깊이 맺는 청소년부</p>
+                            <h4 class="school-card-title">청소년부</h4>
+                            <p class="school-card-desc desktop-only">신앙을 바탕으로 성장하며<br>하나님과 관계를 깊이 맺는 청소년부</p>
                         </div>
                     </div>
 
                     <!-- School Card 4 -->
-                    <div class="fade-up h-full" data-delay="360">
-                        <div class="school-card p-5 md:p-10">
-                            <div class="school-card-icon md:[transform:scale(1)]">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform: scale(1.3)">
+                    <div class="fade-up church-school-fade-wrapper" data-delay="360">
+                        <div class="school-card">
+                            <div class="school-card-icon">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#334" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="school-card-svg">
                                     <path d="M24 6c0 8-8 12-8 20a8 8 0 0016 0c0-4-3-7-3-12-2 3-3 5-3 8a4 4 0 01-8 0c0-5 6-9 6-16z"></path>
                                 </svg>
                             </div>
-                            <h4 class="school-card-title md:text-[1.11rem]">청년부</h4>
-                            <p class="school-card-desc hidden md:block">빛과 소금으로<br>살아가려 힘쓰는 청년부</p>
+                            <h4 class="school-card-title">청년부</h4>
+                            <p class="school-card-desc desktop-only">빛과 소금으로<br>살아가려 힘쓰는 청년부</p>
                         </div>
                     </div>
                 </div>
@@ -250,8 +250,8 @@
         </section>
 
         <!-- ━━━ GALLERY ━━━ -->
-        <section class="gallery-section py-10 md:py-[60px] bg-white">
-            <div class="gallery-container" style="font-family: 'Noto Sans KR', sans-serif;">
+        <section class="gallery-section">
+            <div class="gallery-container">
                 <div class="fade-up">
                     <h2 class="gallery-title">gallery</h2>
                 </div>
@@ -290,15 +290,15 @@
         </section>
 
         <!-- ━━━ FOOTER ━━━ -->
-        <footer class="footer-section py-8 md:py-[40px]">
-            <div class="footer-container max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between gap-6">
+        <footer class="footer-section">
+            <div class="footer-container">
                 <div>
                     <p class="footer-church-name">대한예수교장로회 대전서문교회</p>
                     <p class="footer-pastor">김용환 담임목사</p>
                     <div class="footer-divider"></div>
                     <p class="footer-address">35002 대전 중구 산성로138번길 8<br>Tel : 042-583-9191&nbsp;&nbsp;&nbsp;Fax : 042-586-2222</p>
                 </div>
-                <div class="footer-right flex items-start md:items-end md:text-right">
+                <div class="footer-right">
                     <div>
                         <p class="footer-copyright">Copyright © 2026 대전서문교회</p>
                         <p class="footer-designer">

@@ -43,33 +43,6 @@
     width: 100%;
 }
 
-/* Utilities */
-.max-w-\[1440px\] { max-width: 1440px; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.w-full { width: 100%; }
-.h-full { height: 100%; }
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-between { justify-content: space-between; }
-.gap-2 { gap: 0.5rem; }
-.gap-3 { gap: 0.75rem; }
-.gap-4 { gap: 1rem; }
-.gap-6 { gap: 1.5rem; }
-.gap-8 { gap: 2rem; }
-.relative { position: relative; }
-.absolute { position: absolute; }
-.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-.overflow-hidden { overflow: hidden; }
-.text-center { text-align: center; }
-.grid { display: grid; }
-.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.w-fit { width: fit-content; }
-.justify-start { justify-content: flex-start; }
-.flex-col { flex-direction: column; }
-.bg-white { background-color: #ffffff; }
-
 /* ━━━ HEADER ━━━ */
 .header-container {
     background: rgba(30, 40, 60, 0.5);
@@ -77,7 +50,24 @@
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 50;
+}
+.header-content {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 .header-logo-text {
     color: white;
@@ -86,6 +76,7 @@
 }
 .header-nav {
     display: none;
+    align-items: center;
     gap: 1.75rem; /* 28px */
 }
 .header-nav-link {
@@ -102,9 +93,17 @@
 
 /* ━━━ HERO ━━━ */
 .hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     height: 28.75rem; /* 460px */
 }
 .hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-size: cover;
     background-position: center;
     opacity: 0;
@@ -120,6 +119,17 @@
     padding-top: 2.5rem; /* 40px */
     padding-bottom: 2.5rem;
 }
+.welcome-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
 .welcome-text-container {
     text-align: center;
 }
@@ -127,6 +137,8 @@
     width: 2rem; /* 32px */
     height: 0.125rem; /* 2px */
     background: #aaa;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1rem; /* 16px */
 }
 .welcome-title {
@@ -146,7 +158,16 @@
     display: flex;
     justify-content: center;
 }
+.welcome-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    justify-content: flex-start;
+    width: fit-content;
+}
 .welcome-card {
+    width: 6.5rem; /* 104px */
+    height: 6rem; /* 96px */
     border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
@@ -168,19 +189,49 @@
 
 /* ━━━ THREE CARDS ━━━ */
 .three-cards-section {
+    background-color: #ffffff;
     padding-top: 2rem; /* 32px */
     padding-bottom: 2.5rem; /* 40px */
 }
+.three-cards-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+}
 .three-card {
+    position: relative;
+    overflow: hidden;
+    height: 13.75rem; /* 220px */
     border-radius: 0;
     background-size: cover;
     background-position: center;
+}
+.card-1-bg { background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/b296f3afe89d1d05fc74a1591eaa36470b560ba9.png'); }
+.card-2-bg { background-image: url('https://images.unsplash.com/photo-1545508494-791bd389831e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJsZSUyMGJvb2slMjBzaGFkb3clMjBsaWdodCUyMG1vb2R5JTIwbm8lMjBwZW9wbGV8ZW58MXx8fHwxNzcyNjI1MDk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'); }
+.card-3-bg { background-image: url('https://images.unsplash.com/photo-1558418294-9da149757efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhciUyMGJsdWUlMjBza3klMjBtaW5pbWFsfGVufDF8fHx8MTc3MjYyNDk3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'); }
+
+.three-card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 .card-1-overlay { background: linear-gradient(to bottom, rgba(40,30,20,0.5), rgba(40,30,20,0.7)); }
 .card-2-overlay { background: linear-gradient(to bottom, rgba(160,100,30,0.55), rgba(160,100,30,0.75)); }
 .card-3-overlay { background: linear-gradient(to bottom, rgba(40,30,50,0.35), rgba(40,30,50,0.6)); }
 
 .three-card-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 1rem; /* 16px */
 }
 .three-card-badge {
@@ -211,26 +262,48 @@
     margin-top: 0.25rem; /* 4px */
 }
 .three-card-arrow {
+    position: absolute;
+    bottom: 0.75rem; /* 12px */
+    right: 0.75rem;
+    width: 2.25rem; /* 36px */
+    height: 2.25rem;
     border-radius: 50%;
     border: 1px solid rgba(255,255,255,0.4);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s;
 }
 .three-card:hover .three-card-arrow {
     transform: translateY(-0.25rem); /* -4px */
     background: rgba(255,255,255,0.3);
 }
-.hidden { display: none; }
-.block { display: block; }
 
 /* ━━━ CHURCH SCHOOL ━━━ */
 .church-school-section {
+    position: relative;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     background-size: cover;
     background-position: center;
+    background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/ebca73308d3ec6ec07e3882fa50bd0f0704c63c1.png');
 }
 .church-school-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: rgba(0,0,0,0.5);
+}
+.church-school-container {
+    position: relative;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
 }
 .church-school-title {
     color: white;
@@ -243,7 +316,19 @@
     font-size: 1rem;
     margin-bottom: 2rem; /* 32px */
 }
+.church-school-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.church-school-fade-wrapper {
+    height: 100%;
+}
 .school-card {
+    padding: 1.25rem; /* 20px */
     background: white;
     border-radius: 0;
     text-align: center;
@@ -266,6 +351,9 @@
     transition: filter 0.35s ease;
     transform: scale(0.75);
     transform-origin: center;
+}
+.school-card-svg {
+    transform: scale(1.3);
 }
 .school-card:hover .school-card-icon {
     filter: brightness(0) invert(1);
@@ -293,7 +381,12 @@
 
 /* ━━━ GALLERY ━━━ */
 .gallery-section {
-    /* bg-white */
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: #ffffff;
+}
+.gallery-container {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .gallery-title {
     font-size: 1.77rem;
@@ -359,7 +452,20 @@
 
 /* ━━━ FOOTER ━━━ */
 .footer-section {
+    padding-top: 2rem; /* 32px */
+    padding-bottom: 2rem;
     background: #333;
+}
+.footer-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 24px */
+    justify-content: space-between;
 }
 .footer-church-name {
     color: #aaa;
@@ -391,9 +497,13 @@
     font-size: 0.94rem;
 }
 .footer-right {
+    display: flex;
     align-items: flex-start;
 }
 
+/* Utils used above */
+.desktop-only { display: none; }
+.mobile-only { display: block; }
 
 /* ━━━ FADE UP ━━━ */
 .fade-up {
@@ -409,66 +519,63 @@
 
 /* ━━━ MEDIA QUERIES ━━━ */
 @media (min-width: 768px) {
-    .md\:px-8 {
+    /* Header */
+    .header-content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    .md\:flex {
+    .header-nav {
         display: flex;
     }
-    .md\:hidden {
+    .header-hamburger {
         display: none;
     }
-    .md\:block {
-        display: block;
-    }
-    .md\:flex-row {
-        flex-direction: row;
-    }
-    .md\:items-center {
-        align-items: center;
-    }
-    .md\:justify-between {
-        justify-content: space-between;
-    }
-    .md\:justify-end {
-        justify-content: flex-end;
-    }
-    .md\:text-left {
-        text-align: left;
-    }
-    .md\:text-right {
-        text-align: right;
-    }
-    .md\:mx-0 {
-        margin-left: 0;
-        margin-right: 0;
-    }
 
+    /* Hero */
     .hero-section {
         height: 45.5rem; /* 728px */
     }
 
+    /* Welcome */
     .welcome-section {
         padding-top: 3.5rem; /* 56px */
         padding-bottom: 3.5rem;
     }
-    .md\:gap-10 {
+    .welcome-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 2.5rem; /* 40px */
+    }
+    .welcome-text-container {
+        text-align: left;
+    }
+    .welcome-bar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .welcome-cards-container {
+        justify-content: flex-end;
     }
     .welcome-cards-grid {
         display: inline-flex;
         flex-wrap: wrap;
     }
+    .welcome-card {
+        width: 8.125rem; /* 130px */
+        height: 7.5rem; /* 120px */
+    }
 
+    /* Three Cards */
     .three-cards-section {
         padding-top: 3.75rem; /* 60px */
         padding-bottom: 4.375rem; /* 70px */
     }
-    .md\:grid-cols-3 {
+    .three-cards-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .md\:gap-\[30px\] {
         gap: 1.875rem; /* 30px */
     }
     .three-card {
@@ -487,26 +594,30 @@
         height: 2.75rem;
     }
 
+    /* Church School */
     .church-school-section {
         padding-top: 4.375rem; /* 70px */
         padding-bottom: 4.375rem;
     }
-    .md\:grid-cols-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+    .church-school-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
-    .md\:gap-6 {
+    .church-school-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1.5rem; /* 24px */
     }
     .school-card {
         padding: 2.5rem; /* 40px */
     }
-    .md\:\[transform\:scale\(1\)\] {
+    .school-card-icon {
         transform: scale(1);
     }
     .school-card-title {
         font-size: 1.11rem;
     }
 
+    /* Gallery */
     .gallery-section {
         padding-top: 3.75rem; /* 60px */
         padding-bottom: 3.75rem;
@@ -518,11 +629,22 @@
         width: 10rem; /* 160px */
     }
 
+    /* Footer */
     .footer-section {
         padding-top: 2.5rem; /* 40px */
         padding-bottom: 2.5rem;
     }
-    .md\:items-end {
-        align-items: flex-end;
+    .footer-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        flex-direction: row;
     }
+    .footer-right {
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    /* Utils */
+    .desktop-only { display: block; }
+    .mobile-only { display: none; }
 }
