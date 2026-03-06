@@ -1,0 +1,524 @@
+/*
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/NotoSansKR-Light.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/NotoSansKR-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/NotoSansKR-Bold.woff2') format('woff2');
+}
+*/
+html {
+    font-size: 18px; /* 1rem = 18px 이 됩니다 */
+}
+:root {
+    --max-width: 1440px;
+    --baseline-rem: 16px;
+}
+
+/* Base Breakout */
+.cms-content-root {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    overflow-x: hidden;
+}
+
+.app-container {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ━━━ HERO ━━━ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 28.75rem; /* 460px */
+}
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+.hero-image-active {
+    opacity: 1;
+}
+
+/* ━━━ WELCOME ━━━ */
+.welcome-section {
+    background-color: #F7F8F9;
+    padding-top: 2.5rem; /* 40px */
+    padding-bottom: 2.5rem;
+}
+.welcome-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.welcome-text-container {
+    text-align: center;
+}
+.welcome-bar {
+    width: 2rem; /* 32px */
+    height: 0.125rem; /* 2px */
+    background: #aaa;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; /* 16px */
+}
+.welcome-title {
+    font-size: 1.77rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.875rem; /* 14px */
+}
+.welcome-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    max-width: 25rem; /* 400px */
+}
+.welcome-cards-container {
+    display: flex;
+    justify-content: center;
+}
+.welcome-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    justify-content: flex-start;
+    width: fit-content;
+}
+.welcome-card {
+    width: 6.5rem; /* 104px */
+    height: 6rem; /* 96px */
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* 8px */
+    cursor: pointer;
+    background: white;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+}
+.welcome-card:hover {
+    transform: translateY(-0.9375rem); /* -15px */
+}
+.welcome-card-label {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* ━━━ THREE CARDS ━━━ */
+.three-cards-section {
+    background-color: #ffffff;
+    padding-top: 2rem; /* 32px */
+    padding-bottom: 2.5rem; /* 40px */
+}
+.three-cards-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+}
+.three-card {
+    position: relative;
+    overflow: hidden;
+    height: 13.75rem; /* 220px */
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+}
+.card-1-bg { background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/sermon_bg_1.png'); }
+.card-2-bg { background-image: url('https://images.unsplash.com/photo-1545508494-791bd389831e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJsZSUyMGJvb2slMjBzaGFkb3clMjBsaWdodCUyMG1vb2R5JTIwbm8lMjBwZW9wbGV8ZW58MXx8fHwxNzcyNjI1MDk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'); }
+.card-3-bg { background-image: url('https://images.unsplash.com/photo-1558418294-9da149757efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhciUyMGJsdWUlMjBza3klMjBtaW5pbWFsfGVufDF8fHx8MTc3MjYyNDk3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'); }
+
+.three-card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.card-1-overlay { background: linear-gradient(to bottom, rgba(40,30,20,0.5), rgba(40,30,20,0.7)); }
+.card-2-overlay { background: linear-gradient(to bottom, rgba(160,100,30,0.55), rgba(160,100,30,0.75)); }
+.card-3-overlay { background: linear-gradient(to bottom, rgba(40,30,50,0.35), rgba(40,30,50,0.6)); }
+
+.three-card-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem; /* 16px */
+}
+.three-card-badge {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.94rem;
+    letter-spacing: 1px;
+}
+.three-card-title {
+    color: white;
+    font-size: 1.77rem;
+    font-weight: 700;
+    margin-top: 0.75rem; /* 12px */
+}
+.three-card-title-mobile {
+    color: white;
+    font-size: 1.22rem;
+    font-weight: 700;
+    margin-top: 0.5rem; /* 8px */
+}
+.three-card-subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.94rem;
+    margin-top: 0.5rem; /* 8px */
+}
+.three-card-date {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.94rem;
+    margin-top: 0.25rem; /* 4px */
+}
+.three-card-arrow {
+    position: absolute;
+    bottom: 0.75rem; /* 12px */
+    right: 0.75rem;
+    width: 2.25rem; /* 36px */
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.three-card:hover .three-card-arrow {
+    transform: translateY(-0.25rem); /* -4px */
+    background: rgba(255,255,255,0.3);
+}
+
+/* ━━━ CHURCH SCHOOL ━━━ */
+.church-school-section {
+    position: relative;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/UserData/djsmchurch/Layouts/djsmchurch_Layout/images/ebca73308d3ec6ec07e3882fa50bd0f0704c63c1.png');
+}
+.church-school-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+.church-school-container {
+    position: relative;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+.church-school-title {
+    color: white;
+    font-size: 1.77rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem; /* 12px */
+}
+.church-school-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    margin-bottom: 2rem; /* 32px */
+}
+.church-school-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.church-school-fade-wrapper {
+    height: 100%;
+}
+.school-card {
+    padding: 1.25rem; /* 20px */
+    background: white;
+    border-radius: 0;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    transition: background 0.35s ease;
+    cursor: pointer;
+}
+.school-card:hover {
+    background: #1e3a8a;
+}
+.school-card-icon {
+    margin-bottom: 0.75rem; /* 12px */
+    display: flex;
+    justify-content: center;
+    transition: filter 0.35s ease;
+    transform: scale(0.75);
+    transform-origin: center;
+}
+.school-card-svg {
+    transform: scale(1.3);
+}
+.school-card:hover .school-card-icon {
+    filter: brightness(0) invert(1);
+}
+.school-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.375rem; /* 6px */
+    transition: color 0.35s ease;
+}
+.school-card:hover .school-card-title {
+    color: white;
+}
+.school-card-desc {
+    font-size: 0.88rem;
+    color: #777;
+    white-space: pre-line;
+    line-height: 1.6;
+    transition: color 0.35s ease;
+}
+.school-card:hover .school-card-desc {
+    color: rgba(255,255,255,0.75);
+}
+
+/* ━━━ GALLERY ━━━ */
+.gallery-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: #ffffff;
+}
+.gallery-container {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.gallery-title {
+    font-size: 1.77rem;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    margin-bottom: 2rem; /* 32px */
+}
+.gallery-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    user-select: none;
+    touch-action: pan-y;
+    padding: 0 1rem; /* Default for mobile */
+}
+.gallery-carousel-track {
+    display: flex;
+    /* transition is handled via JS */
+}
+.gallery-slide {
+    flex-shrink: 0;
+}
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+.gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.75rem; /* 28px */
+    padding: 0 1rem;
+}
+.gallery-btn-prev, .gallery-btn-next {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem; /* 4px */
+    flex-shrink: 0;
+}
+.gallery-arrow-svg {
+    height: 1.25rem; /* 20px */
+}
+.gallery-arrow-left, .gallery-arrow-right {
+    width: 3.75rem; /* 60px mobile */
+}
+.gallery-dots {
+    display: flex;
+    gap: 0.5rem; /* 8px */
+    align-items: center;
+}
+.gallery-dot {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Utils used above */
+.desktop-only { display: none; }
+.mobile-only { display: block; }
+
+/* ━━━ FADE UP ━━━ */
+.fade-up {
+    opacity: 0;
+    transform: translateY(2.25rem); /* 36px */
+    /* Transition applied via JS based on data-delay */
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ━━━ MEDIA QUERIES ━━━ */
+@media (min-width: 768px) {
+    /* Hero */
+    .hero-section {
+        height: 45.5rem; /* 728px */
+    }
+
+    /* Welcome */
+    .welcome-section {
+        padding-top: 3.5rem; /* 56px */
+        padding-bottom: 3.5rem;
+    }
+    .welcome-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2.5rem; /* 40px */
+    }
+    .welcome-text-container {
+        text-align: left;
+    }
+    .welcome-bar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .welcome-cards-container {
+        justify-content: flex-end;
+    }
+    .welcome-cards-grid {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    .welcome-card {
+        width: 8.125rem; /* 130px */
+        height: 7.5rem; /* 120px */
+    }
+
+    /* Three Cards */
+    .three-cards-section {
+        padding-top: 3.75rem; /* 60px */
+        padding-bottom: 4.375rem; /* 70px */
+    }
+    .three-cards-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.875rem; /* 30px */
+    }
+    .three-card {
+        height: 23.75rem; /* 380px */
+    }
+    .three-card-content {
+        padding-top: 2rem; /* 32px */
+        padding-right: 1.75rem; /* 28px */
+        padding-bottom: 1.75rem;
+        padding-left: 2rem;
+    }
+    .three-card-arrow {
+        bottom: 1.75rem; /* 28px */
+        right: 1.75rem;
+        width: 2.75rem; /* 44px */
+        height: 2.75rem;
+    }
+
+    /* Church School */
+    .church-school-section {
+        padding-top: 4.375rem; /* 70px */
+        padding-bottom: 4.375rem;
+    }
+    .church-school-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .church-school-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem; /* 24px */
+    }
+    .school-card {
+        padding: 2.5rem; /* 40px */
+    }
+    .school-card-icon {
+        transform: scale(1);
+    }
+    .school-card-title {
+        font-size: 1.11rem;
+    }
+
+    /* Gallery */
+    .gallery-section {
+        padding-top: 3.75rem; /* 60px */
+        padding-bottom: 3.75rem;
+    }
+    .gallery-carousel-wrapper {
+        padding: 0;
+    }
+    .gallery-arrow-left, .gallery-arrow-right {
+        width: 10rem; /* 160px */
+    }
+
+    /* Utils */
+    .desktop-only { display: block; }
+    .mobile-only { display: none; }
+}
