@@ -43,54 +43,6 @@
     width: 100%;
 }
 
-/* ━━━ HEADER ━━━ */
-.header-container {
-    background: rgba(30, 40, 60, 0.5);
-    height: 4.75rem; /* 76px */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 50;
-}
-.header-content {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.header-logo-text {
-    color: white;
-    font-size: 1.33rem;
-    font-weight: 500;
-}
-.header-nav {
-    display: none;
-    align-items: center;
-    gap: 1.75rem; /* 28px */
-}
-.header-nav-link {
-    color: white;
-    font-size: 1.11rem;
-    font-weight: 400;
-    text-decoration: none;
-}
-.header-hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 /* ━━━ HERO ━━━ */
 .hero-section {
     position: relative;
@@ -450,57 +402,6 @@
     transition: all 0.3s;
 }
 
-/* ━━━ FOOTER ━━━ */
-.footer-section {
-    padding-top: 2rem; /* 32px */
-    padding-bottom: 2rem;
-    background: #333;
-}
-.footer-container {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem; /* 24px */
-    justify-content: space-between;
-}
-.footer-church-name {
-    color: #aaa;
-    font-size: 1rem;
-    margin-bottom: 0.25rem; /* 4px */
-}
-.footer-pastor {
-    color: #aaa;
-    font-size: 0.94rem;
-    margin-bottom: 0.75rem; /* 12px */
-}
-.footer-divider {
-    width: 1.75rem; /* 28px */
-    height: 0.0625rem; /* 1px */
-    background: #666;
-    margin-bottom: 0.75rem; /* 12px */
-}
-.footer-address {
-    color: #888;
-    font-size: 0.94rem;
-    line-height: 1.7;
-}
-.footer-copyright {
-    color: #999;
-    font-size: 0.94rem;
-}
-.footer-designer {
-    color: #777;
-    font-size: 0.94rem;
-}
-.footer-right {
-    display: flex;
-    align-items: flex-start;
-}
-
 /* Utils used above */
 .desktop-only { display: none; }
 .mobile-only { display: block; }
@@ -519,18 +420,6 @@
 
 /* ━━━ MEDIA QUERIES ━━━ */
 @media (min-width: 768px) {
-    /* Header */
-    .header-content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-    .header-nav {
-        display: flex;
-    }
-    .header-hamburger {
-        display: none;
-    }
-
     /* Hero */
     .hero-section {
         height: 45.5rem; /* 728px */
@@ -627,21 +516,6 @@
     }
     .gallery-arrow-left, .gallery-arrow-right {
         width: 10rem; /* 160px */
-    }
-
-    /* Footer */
-    .footer-section {
-        padding-top: 2.5rem; /* 40px */
-        padding-bottom: 2.5rem;
-    }
-    .footer-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        flex-direction: row;
-    }
-    .footer-right {
-        align-items: flex-end;
-        text-align: right;
     }
 
     /* Utils */
